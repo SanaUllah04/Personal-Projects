@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Page</title>
+</head>
+
+
+
+<body>
+    <header>
+        <h1>My Website</h1>
+        <h1>Hello</h1>
+    </header>>
+
+
+    
+    <form action="/login" method="POST">
+        <input name="email" value="ahmad@mail.com">
+        <input name="password" type="NIGGA" value="secret123">
+        <button>Sign in</button>
+    </form>
+
+
+
+    <article>
+        <h1>Why I love coffee</h1>
+        <p>Posted by <strong>Ahmad</strong> on <time>May 19</time></p>
+        <img src="cup.jpg" alt="A cup of coffee">
+        <p>Coffee keeps me coding late at night...</p>
+        <a href="/blog">← Back to blog</a>
+    </article>
+
+
+
+    <form action="register.php" method="POST">
+        <label>
+            Name:    <input type="text"  name="name" required>
+            Email:   <input type="email" name="email" required>
+            Age:     <input type="number" name="age" min="16" max="60">
+            Gender:
+                <input type="radio" name="g" value="M"> Male
+                <input type="radio" name="g" value="F"> Female
+            Courses:
+                <input type="checkbox" name="c[]" value="web"> Web
+                <input type="checkbox" name="c[]" value="db">  Database
+            Photo:   <input type="file" name="photo">
+
+
+        </label>
+        <button type="submit">Register</button>
+    </form>
+
+
+
+<table border="10" cellpadding="16">
+  <thead>
+    <tr><th>Roll</th><th>Name</th><th>Marks</th><th>Grade</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>01</td><td>Ahmad</td><td>85</td><td>A</td></tr>
+    <tr><td>02</td><td>Ali</td>  <td>72</td><td>B</td></tr>
+    <tr><td>03</td><td>Sara</td> <td>91</td><td>A+</td></tr>
+  </tbody>
+</table>
+
+
+
+
+<!-- 1. inline (quick test, hard to maintain) -->
+<button style="background:#2dd4a8;color:#000;padding:8px 16px;">Buy</button>
+
+
+
+<!-- 2. internal (single-page styling) -->
+<style>
+  .btn { background:#2dd4a8; color:#000; padding:8px 16px; }
+</style>
+<button class="btn">Buy</button>
+
+
+
+<!-- 3. external (best for real projects) -->
+<link rel="stylesheet" href="style.css">
+<button class="btn">Buy</button>
+
+
+
+
+
+<button onclick="show()">Click</button>
+<script>
+  function show() { alert("Hello"); }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<textarea id="tw" maxlength="280"></textarea>
+<p id="count">0 / 280</p>
+
+
+
+
+<script>
+  const tw = document.getElementById("tw");
+  const out = document.getElementById("count");
+  tw.addEventListener("keyup", () => {
+    out.textContent = tw.value.length + " / 280";
+  });
+</script>
+
+
+
+<p id="demo">Hello</p>
+<button onclick="change()"> CHange </button>
+
+<script>
+
+    function change() {
+        document.getElementById("demo").innerHTML = "NIGAA";
+    }
+
+</script>
+
+
+
+
+
+
+<ul id="list">
+  <li>Read web tech notes</li>
+  <li>Practice forms</li>
+  <li>Sleep</li>
+</ul>
+
+<script>
+  document.getElementById("list").addEventListener("click", (e) => {
+    if (e.target.tagName === "LI") {
+      e.target.style.textDecoration =
+        e.target.style.textDecoration === "line-through" ? "none" : "line-through";
+    }
+  });
+</script>
+
+
+
+
+
+
+
+  <h1 id="title">Hello World</h1>
+<button id="btn">Click Me</button>
+
+  <script>
+    // Select element
+    const button = document.getElementById('btn');
+    const heading = document.getElementById('title');
+
+    // Add click event
+    button.addEventListener('click', function() {
+      heading.textContent = 'You clicked the button!';
+      heading.style.color = 'blue';
+    });
+  </script>
+
+
+</body>
+</html>
+
+
+
